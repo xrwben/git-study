@@ -25,19 +25,27 @@
 * 将src下的所有js文件添加到暂存区 
 
 
-#### commit 将更改记录(提交)到存储库 如果您提交，然后立即发现错误，可以使用 git reset
+#### 三、commit 将更改记录(提交)到存储库 如果您提交，然后立即发现错误，可以使用 git reset
 
 > `git commit -m "xxx描述"`
 
-#### remote 命令管理一组跟踪的存储库(管理远程仓库)
+#### 四、remote 命令管理一组跟踪的存储库(管理远程仓库)
 
 > `git remote add origin http://github.com/xrwben/git-study.git`
 
 
 #### push 命令用于将本地分支的更新，推送到远程主机
 
-#### status
+#### status、log、diff 查看更改
 
 > `git status`
 
- *显示工作目录和暂存区的状态, 此命令能看到那些修改被暂存到了, 哪些没有, 哪些文件没有被Git tracked到, 不显示已经commit到项目历史中去的信息
+ * 显示工作目录和暂存区的状态, 此命令能看到那些修改被暂存到了, 哪些没有, 哪些文件没有被Git tracked到, 不显示已经commit到项目历史中去的信息
+
+> `git log`
+
+ * 查看日志详细信息
+
+ > `git log`
+
+ * 查看更改详情 +表示有内容添加 -表示有内容删除
