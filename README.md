@@ -130,7 +130,7 @@
 
 > `git checkout -b 新建分支名`
 
- * 会在当前分支的基础（最近一次的commit）上新建一个分支
+ * 会在当前分支的基础（最近一次的commit）上新建一个分支, 并且切换到新分支
 
 > `git checkout -m master`
 
@@ -150,4 +150,23 @@
 
 > `git merge branch-1 branch-2`
 
- * 合并分支branch-1和branch-2到当前分支, 要合并到哪个分支就要在哪个分支上把别的分支合并过来
+ * 合并分支branch-1和branch-2到当前分支, 要合并到哪个分支就要在哪个分支上把别的分支合并过来, **记得合并分支前要更新代码**
+
+
+### branch 列出、创建、删除分支
+
+> `git branch`
+
+ * 列出本地分支, 当前分支将以星号突出显示, `--list`(默认) 列出本地分支, `-r` 列出远程分支, `-a` 本地和远程都列出来
+
+> `git branch test-branch-new`
+
+ * 新建分支, 但是不会切换到新建的分支, `git checkout -b test-branch-new`会新建分支并且切换到新建分支
+
+> `git branch -m test-branch-new test-branch-new-rename`
+
+ * 修改分支名称
+
+> `git push origin --delete test-branch-new`
+
+ * 删除某个远程分支, `origin`为远程仓库的名字
