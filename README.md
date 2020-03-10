@@ -42,9 +42,11 @@
 
 > `git remote`
 
- * 要查看当前配置有哪些远程仓库, 会列出远程仓库名称, 例如 origin
+ * 要查看当前配置有哪些远程仓库, 会列出远程仓库名称, 例如origin, `-v`(-verbose) 列出远程仓库名称和地址
 
 > `git remote add origin http://github.com/xrwben/git-study.git`
+ 
+ * 添加一个远程仓库名称和地址
 
 ---
 
@@ -84,7 +86,7 @@
 
 ---
 
-### status、log、diff 查看更改
+### 七、status、log、diff 查看更改
 
 > `git status`
 
@@ -100,7 +102,7 @@
 
 ---
 
-### reset 撤消之前的一些操作(如：git add, git commit等)
+### 八、reset 撤消之前的一些操作(如：git add, git commit等)
 
 > `git reset --soft HEAD~1`
 
@@ -118,7 +120,7 @@
 
 ---
 
-### clone 克隆
+### 九、clone 克隆
 
 > `git clone xxxxx`
 
@@ -126,7 +128,7 @@
 
 ---
 
-### checkout 切换、创建分支
+### 十、checkout 切换、创建分支
 
 > `git checkout -b 新建分支名`
 
@@ -146,14 +148,14 @@
 
 ---
 
-### merge 将两个或两个以上的开发历史加入(合并)一起
+### 十一、merge 将两个或两个以上的开发历史加入(合并)一起
 
 > `git merge branch-1 branch-2`
 
  * 合并分支branch-1和branch-2到当前分支, 要合并到哪个分支就要在哪个分支上把别的分支合并过来, **记得合并分支前要更新代码**
 
 
-### branch 列出、创建、删除分支
+### 十二、branch 列出、创建、删除分支
 
 > `git branch`
 
@@ -170,3 +172,19 @@
 > `git push origin --delete test-branch-new`
 
  * 删除某个远程分支, `origin`为远程仓库的名字
+
+---
+
+### 十三、stash 暂时隐藏你本地的更改
+
+> `git stash` 
+
+ * 保存本地修改, 并恢复工作目录以匹配HEAD提交, --save(默认可省)
+
+> `git stash pop`
+
+ * 恢复
+
+> `git stash list`
+
+ * 列出所储藏的修改
