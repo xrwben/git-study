@@ -48,6 +48,10 @@
  
  * 添加一个远程仓库名称和地址
 
+> `git remote set-url origin http://xxx.git`
+
+ * 修改远程仓库地址
+
 ---
 
 ### 五、push 命令用于将本地分支的更新, 推送到远程主机
