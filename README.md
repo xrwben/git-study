@@ -150,4 +150,4 @@
 
 > `git merge branch-1 branch-2`
 
- * 合并分支branch-1和branch-2到当前分支
+ * 合并分支branch-1和branch-2到当前分支, 要合并到哪个分支就要在哪个分支上把别的分支合并过来
