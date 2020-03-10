@@ -173,6 +173,10 @@
 
  * 删除某个远程分支, `origin`为远程仓库的名字
 
+> `git branch -d 分支名字`
+
+ * 删除本地分支
+
 ---
 
 ### 十三、stash 暂时隐藏你本地的更改
@@ -188,3 +192,23 @@
 > `git stash list`
 
  * 列出所储藏的修改
+
+### 十四、tag 创建、列出、删除、验证使用GPG签名的标签对象
+
+> `git tag`
+
+ * 列出已有的标签
+
+> `git tag -a v0.0.2 -m "tag-v0.0.2"`
+
+ * 创建标签, `-a` 指定标签名字, `-m` 标签说明
+
+> `git push origin --tags | v0.0.2`
+
+ * 推送本地新增的标签上去
+
+### 十五、rebase 把一个分支的修改合并到当前分支
+
+> `git rebase origin`
+
+ * 这些命令会把你的 mywork 分支里的每个提交(commit)取消掉, 并且把它们临时保存为补丁(patch)(这些补丁放到.git/rebase目录中),然后把mywork分支更新到最新的origin分支, 最后把保存的这些补丁应用到mywork分支上
