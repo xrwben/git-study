@@ -145,3 +145,9 @@
  * 撤销特定文件的修改
 
 ---
+
+### merge 将两个或两个以上的开发历史加入(合并)一起
+
+> `git merge branch-1 branch-2`
+
+ * 合并分支branch-1和branch-2到当前分支
