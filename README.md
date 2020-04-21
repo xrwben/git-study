@@ -122,6 +122,10 @@
 
  **HEAD 表示当前索引, HEAD^ 表示上一步, HEAD~1(同HEAD^)、HEAD~2、HEAD~3 表示撤销到到之前第几次提交** 
 
+ > `git reset --hard commitId`
+
+ **表示撤销到commitId记录的这次提交，commitId大概前六七位就可以了** 
+
 ---
 
 ### 九、clone 克隆
@@ -189,9 +193,9 @@
 
  * 保存本地修改, 并恢复工作目录以匹配HEAD提交, --save(默认可省)
 
-> `git stash pop`
+> `git stash pop` or `git stash apply stash@{2}`
 
- * 恢复
+ * 恢复到最近，如果想应用更早的储藏，可以通过名字指定它
 
 > `git stash list`
 
