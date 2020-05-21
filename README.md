@@ -1,4 +1,4 @@
-## 重学git
+## 重学git https://www.yiibai.com/git/git_reset.html
 
 ### 一、init 创建
 
@@ -220,3 +220,10 @@
 > `git rebase origin`
 
  * 这些命令会把你的 mywork 分支里的每个提交(commit)取消掉, 并且把它们临时保存为补丁(patch)(这些补丁放到.git/rebase目录中),然后把mywork分支更新到最新的origin分支, 最后把保存的这些补丁应用到mywork分支上
+
+
+### 十六、clean 删除所有没有tracked过的文件
+
+> `git clean -df`
+
+ * 删除当前目录下没有被track过的文件和文件夹
