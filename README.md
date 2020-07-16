@@ -90,7 +90,7 @@
 
 ---
 
-### 七、status、log、diff 查看更改
+### 七、status、log、diff、reflog 查看更改
 
 > `git status`
 
@@ -100,9 +100,13 @@
 
  * 查看日志详细信息
 
- > `git log`
+> `git diff`
 
  * 查看更改详情 +表示有内容添加 -表示有内容删除
+
+> `git reflog`
+
+ * 查看所有分支的所有操作记录（包括已经被删除的 commit 记录和 reset 的操作）
 
 ---
 
@@ -116,13 +120,13 @@
 
  * 重设reset索引、暂存和工作目录, 更改的代码重置消失到commit初始状态
 
- > `git reset --hard HEAD`
+> `git reset --hard HEAD`
 
  * 相当于清空当前修改
 
  **HEAD 表示当前索引, HEAD^ 表示上一步, HEAD~1(同HEAD^)、HEAD~2、HEAD~3 表示撤销到到之前第几次提交** 
 
- > `git reset --hard commitId`
+> `git reset --hard commitId`
 
  **表示撤销到commitId记录的这次提交，commitId大概前六七位就可以了** 
 
@@ -137,7 +141,7 @@
 ---
 
 ### 十、checkout 切换、创建分支
-
+ 
 > `git checkout -b 新建分支名`
 
  * 会在当前分支的基础（最近一次的commit）上新建一个分支, 并且切换到新分支
@@ -146,9 +150,9 @@
 
  * 如果当前分支再test-branch-1且有本地没有暂存的修改, 则切换分支会报错提示, `-m` 标志将尝试三路合并, 把当前的未提交的本地修改合并过去, 这种情况极有可能产生冲突
 
-> `git checkout .`
+> `git checkout .` or `git checkout -- .`
 
- * 把当前目录所有**修改的文件**从HEAD中签出并且把它恢复成未修改时的样子, 相当于**撤销所有修改**, 效果同`git reset --hard HEAD`
+ * 把当前目录所有**修改但未add的文件**从HEAD中签出并且把它恢复成未修改时的样子, 相当于**撤销所有修改**, 效果同`git reset --hard HEAD`
 
 > `git checkout -- a.js`
 
@@ -161,6 +165,10 @@
 > `git merge branch-1 branch-2`
 
  * 合并分支branch-1和branch-2到当前分支, 要合并到哪个分支就要在哪个分支上把别的分支合并过来, **记得合并分支前要更新代码**
+
+> `git merge --abort`
+
+ * 如果出现冲突不想处理冲突，想撤销合并可以使用该命令，--abort将恢复合并之前的状态
 
 
 ### 十二、branch 列出、创建、删除分支
@@ -227,3 +235,9 @@
 > `git clean -df`
 
  * 删除当前目录下没有被track过的文件和文件夹
+
+### 十七、revert 撤销之前的某一提交记录，但是又想保留该提交记录后面的提交文件
+
+> `git revert <commitID>`
+
+ * 反做版本，生成新的版本然后推到远程，很容易有冲突，要做好冲突处理
