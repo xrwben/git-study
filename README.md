@@ -100,9 +100,9 @@
 
  * 查看日志详细信息
 
-> `git diff`
+> `git diff` or `git diff --cached` or `git diff HEAD`
 
- * 查看更改详情 +表示有内容添加 -表示有内容删除
+ * 查看更改详情 +表示有内容添加 -表示有内容删除, 上面分别表示[查看working tree与index file的差别]or[index file与commit的差别]or[working tree和commit的差别] 第一个命令和最后一个命令结果相同
 
 > `git reflog`
 
@@ -157,6 +157,10 @@
 > `git checkout -- a.js`
 
  * 撤销特定文件的修改
+
+> `git checkout branch-name abc.js`
+
+ * 把分支branch-name中的abc.js文件合并到当前分支
 
 ---
 
