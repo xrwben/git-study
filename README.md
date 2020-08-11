@@ -52,6 +52,14 @@
 
  * 修改远程仓库地址
 
+> `git remote show origin`
+
+ * 查看remote地址，远程分支，还有本地分支与之相对应关系等信息, git远程删除分支后，本地`git branch -a`依然能看到的解决办法
+
+> `git remote prune origin`
+
+ * 删除了那些远程仓库不存在的分支
+
 ---
 
 ### 五、push 命令用于将本地分支的更新, 推送到远程主机
