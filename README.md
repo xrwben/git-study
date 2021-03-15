@@ -203,7 +203,7 @@
 
 > `git branch -d 分支名字`
 
- * 删除本地分支
+ * 删除本地分支，注意当本地分支没有push到远程分支时会提示“The branch 'xxx' is not fully merged”，解决方法是大写-D
 
 ---
 
