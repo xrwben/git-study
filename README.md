@@ -88,6 +88,10 @@
 
 ### 六、pull 将远程存储库中的更改合并到当前分支中
 
+> `git pull <远程主机名> <远程分支名>:<本地分支名>`
+
+ * 将远程主机 origin 的 <远程分支名> 分支拉取过来，与本地的 <本地分支名> 分支合并
+
 > `git pull origin master`
 
  * 等同于先`git fetch`再`git merge FETCH_HEAD`, 如果不存在追踪信息, 则提示会跟push一样提示, 如果存在则可以省略表示`git pull`
