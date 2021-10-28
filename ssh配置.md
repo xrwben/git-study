@@ -9,3 +9,10 @@
 4、`cat id_rsa.pub`命令或使用文本编辑器打开 id_rsa.pub 文件并复制使用
 
 5、到代码仓库找到设置SSH配置, 然后添加复制的id_rsa.pub公钥
+
+
+### TortoiseGit工具
+
+1、使用TortoiseGit工具pull或push时提示Disconnected: No supported authentication methods available (server sent: publickey)错误？
+
+解决：在 git bash 中没有错误, 所以是TortoiseGit的配置问题, 需要设置下TortoiseGit的SSH配置, 找到 TortoiseGit -> Settings -> Network -> SSH client, 替换为Git安装目录下usr/bin/ssh.exe文件(或者bin/ssh.exe)即可
