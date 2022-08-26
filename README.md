@@ -225,6 +225,14 @@
 
  * 列出所储藏的修改
 
+> `git stash drop stash@{$num}`
+
+  * 删除stash@{$num}存储
+
+> `git stash clear`
+
+  * 删除所有缓存的stash存储
+
 ### 十四、tag 创建、列出、删除、验证使用GPG签名的标签对象
 
 > `git tag`
